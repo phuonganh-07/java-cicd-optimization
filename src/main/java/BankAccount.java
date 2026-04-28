@@ -16,6 +16,9 @@ public class BankAccount {
   public BankAccount(String accountNumber, String ownerName, double initialBalance) {
     this.accountNumber = accountNumber;
     this.ownerName = ownerName;
+
+    System.out.println("DEBUG: Creating account for " + ownerName);
+
     if (initialBalance < 0) {
       logger.error("Attempted to create account {} with invalid balance: {}", accountNumber, initialBalance);
       this.balance = 0.0;
